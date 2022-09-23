@@ -47,6 +47,12 @@ public class CouchbaseBucketConfiguration extends AbstractCouchbaseConfiguration
         try {
             baseMapping
                     .mapEntity(LoadFile.class, loadFileTemplate());
+
+            // Below is the example how you could access multiple buckets in spring boot
+/*baseMapping
+        .mapEntity(LoadFile.class, loadFileTemplate())
+        .mapEntity(AnotherBucket.class, AnotherBucketTemplate());*/
+
         } catch (Exception e) {
             throw e;
         }
