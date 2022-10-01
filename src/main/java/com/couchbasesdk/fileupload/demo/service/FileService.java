@@ -51,6 +51,8 @@ public class FileService {
 
         LoadFile result = fileRepository.findById(id).orElse(null);
 
+        //fileRepository.getCouchbaseOperations().getCouchbaseBucket()
+
         return result;
     }
 
